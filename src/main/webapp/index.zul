@@ -1,0 +1,49 @@
+<?page title="Griglia"?>
+<window title="Hello World!!" border="normal" width="600px" apply='com.Registrazione'>
+
+	<grid>
+
+		<auxhead>
+			<auxheader colspan="2" label="Form di registrazione"
+				style="font-size:16px" />
+		</auxhead>	<columns visible="false">
+			<column></column>
+			<column></column>
+		</columns>
+	
+		<rows>
+
+			<row>
+				User Nome
+				<textbox id="id_nome" hflex="2" constraint="no empty" />
+
+			</row>
+
+			<row>
+				Genere:
+
+				<radiogroup id="id_genere">
+					<radio label="Maschio" value="M" checked="true"/>
+						<radio label="Femmina" value="F" />
+				</radiogroup>
+			</row>
+			<row>
+				Compleanno
+				<datebox id="compleanno" hflex="1"
+					constraint="no empty,no today,no future" />
+			</row>
+			<row spans="2" align="center">
+				<hlayout>
+					<checkbox id="accetta_i_termini" />
+					Accetta i termini di uso
+				</hlayout>
+			</row>
+			<row spans="2" align="right">
+				<hlayout>
+					<button id="resettaButton" label="Resetta" />
+					<button id="submit" label="invia" disabled="true" />
+				</hlayout>
+			</row>
+		</rows>
+	</grid>
+</window>
